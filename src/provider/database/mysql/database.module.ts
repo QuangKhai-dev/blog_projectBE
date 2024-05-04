@@ -14,7 +14,7 @@ import { MySqlConfigService } from 'src/config/database/mysql/config.service';
         username: mysqlConfig.username,
         password: mysqlConfig.password,
         database: mysqlConfig.database,
-        entities: [],
+        entities: [__dirname + '/../../../models/**/*.entity{.ts,.js}'],
         synchronize: true,
       }),
       inject: [MySqlConfigService],
